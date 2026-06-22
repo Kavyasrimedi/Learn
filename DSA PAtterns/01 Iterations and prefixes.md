@@ -50,4 +50,11 @@ for i, val in enumerate(nums):
 
 ---
 
- Best time to buy and sell stock - [sol]https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/
+## Approavches 
+**1. Two sum - O(n), hashmap**
+   - Use hashmap to store value:index 
+   - Check if Complement=target-value in hashmap and index of that value h[value] != current index i
+   - Return h[complement],i 
+**2. Best time to buy and sell stock - O(n) DP [sol]**(https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/)
+   - For today (i) , find a day which is greater than today.
+   - 

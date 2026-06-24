@@ -54,7 +54,18 @@ for i, val in enumerate(nums):
 **1. Two sum - O(n), hashmap**
    - Use hashmap to store value:index 
    - Check if Complement=target-value in hashmap and index of that value h[value] != current index i
-   - Return h[complement],i 
-**2. Best time to buy and sell stock - O(n) DP [sol]**(https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/)
+   - Return h[complement],i
+---
+**2. Best time to buy and sell stock - O(n) DP - [sol](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/)**
    - For today (i) , find a day which is greater than today.
-   - 
+   1. Initialize variables buy with the first element of the prices array and profit as 0.
+   2.Iterate through the prices starting from the second element.
+   3.Update the buy variable if the current price is lower than the current buying price.
+   4.Update the profit if the difference between the current price and the buying price is greater than the current profit.
+   5.Return the final profit.
+---
+**3. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)**
+   a. using count() - O(n*n)
+   b. sorting and comparing n[i],n[i+1] - O(nlogn)
+   c. using hashmap with val:1 - O(n) (if[i in h? true:false])
+   d. using set - same as hashmap 

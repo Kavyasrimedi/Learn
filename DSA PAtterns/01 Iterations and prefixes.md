@@ -69,3 +69,14 @@ for i, val in enumerate(nums):
    b. sorting and comparing n[i],n[i+1] - O(nlogn)
    c. using hashmap with val:1 - O(n) (if[i in h? true:false])
    d. using set - same as hashmap 
+
+**4. [Product of array except self](https://leetcode.com/problems/product-of-array-except-self/)**
+   a. Brute force - nested for loop - if i!=j : ans[i]*=n[j] - O(n*n)
+   b. DP(tabulation) - two prefix product arrays - from i=0 and i=len(n)-1
+       i=0 --> left_prod[] -> lp[i]=lp[i-1]*n[i-1]
+       i=len(n)-1 --> right_prod[] -> rp[i]=rp[i+1]*n[i+1]
+       ans[i]=lp[i]*rp[i]
+   c. DP (space optimisation) - res[] - two for loops 
+       i=0 -> res[i]=res[i-1]*n[i-1]
+       i=len(n)-1 -> r=1; for--> res[i]*=r; r*=n[i]
+    each loop calculates the prefix prod leaving the current val

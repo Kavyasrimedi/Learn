@@ -57,26 +57,33 @@ for i, val in enumerate(nums):
    - Return h[complement],i
 ---
 **2. Best time to buy and sell stock - O(n) DP - [sol](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/)**
-   - For today (i) , find a day which is greater than today.
-   1. Initialize variables buy with the first element of the prices array and profit as 0.
-   2.Iterate through the prices starting from the second element.
-   3.Update the buy variable if the current price is lower than the current buying price.
-   4.Update the profit if the difference between the current price and the buying price is greater than the current profit.
-   5.Return the final profit.
+   - For today (i) , find a day which is greater than today.<br>
+   1. Initialize variables buy with the first element of the prices array and profit as 0.<br>
+   2.Iterate through the prices starting from the second element.<br>
+   3.Update the buy variable if the current price is lower than the current buying price.<br>
+   4.Update the profit if the difference between the current price and the buying price is greater than the current profit.<br>
+   5.Return the final profit.<br>
 ---
-**3. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)**
-   a. using count() - O(n*n)
-   b. sorting and comparing n[i],n[i+1] - O(nlogn)
-   c. using hashmap with val:1 - O(n) (if[i in h? true:false])
-   d. using set - same as hashmap 
+**3. Contains Duplicate - [problem](https://leetcode.com/problems/contains-duplicate/description/)** <br>
+   a. using count() - O(n*n)<br>
+   b. sorting and comparing n[i], n[i+1] - O(nlogn)<br>
+   c. using hashmap with val:1 - O(n) (if[i in h? true:false])<br>
+   d. using set - same as hashmap <br>
 
-**4. [Product of array except self](https://leetcode.com/problems/product-of-array-except-self/)**
-   a. Brute force - nested for loop - if i!=j : ans[i]*=n[j] - O(n*n)
-   b. DP(tabulation) - two prefix product arrays - from i=0 and i=len(n)-1
-       i=0 --> left_prod[] -> lp[i]=lp[i-1]*n[i-1]
-       i=len(n)-1 --> right_prod[] -> rp[i]=rp[i+1]*n[i+1]
-       ans[i]=lp[i]*rp[i]
-   c. DP (space optimisation) - res[] - two for loops 
-       i=0 -> res[i]=res[i-1]*n[i-1]
-       i=len(n)-1 -> r=1; for--> res[i]*=r; r*=n[i]
-    each loop calculates the prefix prod leaving the current val
+---
+**4. Product of array except self - [problem](https://leetcode.com/problems/product-of-array-except-self/)** <br>
+   a. **Brute force** <br>- nested for loop - if i!=j : ans[i]*=n[j] - O(n*n)<br><br>
+   b. **DP(tabulation)** <br>- two prefix product arrays - from i=0 and i=len(n)-1<br>
+       i = 0 --> left_prod[] -> lp[i] = lp[i-1] * n[i-1]<br>
+       i = len(n)-1 --> right_prod[] -> rp[i] = rp[i+1] * n[i+1]<br>
+       ans[i] = lp[i] * rp[i]<br><br>
+   c. **DP (space optimisation)** <br> - res[] - two for loops <br>
+       i = 0 -> res[i] = res[i-1] * n[i-1]<br>
+       i = len(n)-1 -> r = 1; for--> res[i] *= r; r *= n[i]<br>
+    each loop calculates the prefix prod leaving the current val<br>
+
+---
+**5. Range Sum Query - Immutable - [problem](https://leetcode.com/problems/range-sum-query-immutable/)** <br>
+    **Prefix sum** approach <br>
+    1. intialise prefix[] = [0] - append prefix[-1] + nums[i] <br>
+    2. return prefix[right+1] - prefix[left] <br>

@@ -87,3 +87,9 @@ for i, val in enumerate(nums):
     **Prefix sum** approach <br>
     1. intialise prefix[] = [0] - append prefix[-1] + nums[i] <br>
     2. return prefix[right+1] - prefix[left] <br>
+
+---
+**6. Maximum Subarra - [problem[(https://leetcode.com/problems/maximum-subarray/)** <br>
+    1. **Brute force** - nested loop - O(n*n) - TLE <br>
+            - iterate with two nested loops , sum += nums[j] , ans = max(ans,sum)<br>
+    2. 

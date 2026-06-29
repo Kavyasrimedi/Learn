@@ -92,4 +92,7 @@ for i, val in enumerate(nums):
 **6. Maximum Subarra - [problem[(https://leetcode.com/problems/maximum-subarray/)** <br>
     1. **Brute force** - nested loop - O(n*n) - TLE <br>
             - iterate with two nested loops , sum += nums[j] , ans = max(ans,sum)<br>
-    2. 
+    2. **Kadane's Algorithm** - single loop - O(n) <br>
+        - maintain curr_sum and max_sum - while iterating- curr_sum += nums[i]<br>
+        - max_sum = max(max_sum, curr_sum)<br>
+    3. **DP Tabulation** - maintain a 

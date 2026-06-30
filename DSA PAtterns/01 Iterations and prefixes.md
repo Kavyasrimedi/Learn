@@ -96,3 +96,15 @@ for i, val in enumerate(nums):
         - maintain curr_sum and max_sum - while iterating- curr_sum += nums[i]<br>
         - max_sum = max(max_sum, curr_sum)<br>
     3. **DP Tabulation** - maintain a 
+
+**7. Rotate array - [problem](https://leetcode.com/problems/rotate-array/description/)** <br>
+    1. **Brute force** - two for loops -  k value , for rotating array<br>
+        - shift values to prev place - n[j] = n[j-1] , n[0] = n[-1]<br>
+        - **TLE** - O(n*n) <br>
+    2. **Insert method** (Brute force) - insert last value at 0 index , update last value to new value , nums[:] = n[:n] <br>
+    3. **% method** - <br>
+    4. **Reversal method** - k = k%n <br>
+        - reverse first part of array - nums[:k:]<br>
+        - reverse second part - nums[k:n]<br>
+        
+        - reverse whole - nums[::]<br>

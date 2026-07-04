@@ -106,5 +106,4 @@ for i, val in enumerate(nums):
     4. **Reversal method** - k = k%n <br>
         - reverse first part of array - nums[:k:]<br>
         - reverse second part - nums[k:n]<br>
-        
         - reverse whole - nums[::]<br>

@@ -50,13 +50,13 @@ for i, val in enumerate(nums):
 
 ---
 
-## Approavches 
-**1. Two sum - O(n), hashmap**
+## Problems and Approaches 
+## **1. Two sum - O(n), hashmap**
    - Use hashmap to store value:index 
    - Check if Complement=target-value in hashmap and index of that value h[value] != current index i
    - Return h[complement],i
 ---
-**2. Best time to buy and sell stock - O(n) DP - [sol](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/)**
+## **2. Best time to buy and sell stock - O(n) DP - [sol](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/solutions/4868897/most-optimized-kadanes-algorithm-java-c-2yt85/)**
    - For today (i) , find a day which is greater than today.<br>
    1. Initialize variables buy with the first element of the prices array and profit as 0.<br>
    2.Iterate through the prices starting from the second element.<br>
@@ -64,14 +64,14 @@ for i, val in enumerate(nums):
    4.Update the profit if the difference between the current price and the buying price is greater than the current profit.<br>
    5.Return the final profit.<br>
 ---
-**3. Contains Duplicate - [problem](https://leetcode.com/problems/contains-duplicate/description/)** <br>
+## **3. Contains Duplicate - [problem](https://leetcode.com/problems/contains-duplicate/description/)** <br>
    a. using count() - O(n*n)<br>
    b. sorting and comparing n[i], n[i+1] - O(nlogn)<br>
    c. using hashmap with val:1 - O(n) (if[i in h? true:false])<br>
    d. using set - same as hashmap <br>
 
 ---
-**4. Product of array except self - [problem](https://leetcode.com/problems/product-of-array-except-self/)** <br>
+## **4. Product of array except self - [problem](https://leetcode.com/problems/product-of-array-except-self/)** <br>
    a. **Brute force** <br>- nested for loop - if i!=j : ans[i]*=n[j] - O(n*n)<br><br>
    b. **DP(tabulation)** <br>- two prefix product arrays - from i=0 and i=len(n)-1<br>
        i = 0 --> left_prod[] -> lp[i] = lp[i-1] * n[i-1]<br>
@@ -83,21 +83,21 @@ for i, val in enumerate(nums):
     each loop calculates the prefix prod leaving the current val<br>
 
 ---
-**5. Range Sum Query - Immutable - [problem](https://leetcode.com/problems/range-sum-query-immutable/)** <br>
-    **Prefix sum** approach <br>
+## **5. Range Sum Query - Immutable - [problem](https://leetcode.com/problems/range-sum-query-immutable/)** <br>
+       **Prefix sum** approach <br>
     1. intialise prefix[] = [0] - append prefix[-1] + nums[i] <br>
     2. return prefix[right+1] - prefix[left] <br>
 
 ---
-**6. Maximum Subarra - [problem[(https://leetcode.com/problems/maximum-subarray/)** <br>
+## **6. Maximum Subarray - [problem](https://leetcode.com/problems/maximum-subarray/)** <br>
     1. **Brute force** - nested loop - O(n*n) - TLE <br>
             - iterate with two nested loops , sum += nums[j] , ans = max(ans,sum)<br>
     2. **Kadane's Algorithm** - single loop - O(n) <br>
         - maintain curr_sum and max_sum - while iterating- curr_sum += nums[i]<br>
         - max_sum = max(max_sum, curr_sum)<br>
     3. **DP Tabulation** - maintain a 
-
-**7. Rotate array - [problem](https://leetcode.com/problems/rotate-array/description/)** <br>
+---
+## **7. Rotate array - [problem](https://leetcode.com/problems/rotate-array/description/)** <br>
     1. **Brute force** - two for loops -  k value , for rotating array<br>
         - shift values to prev place - n[j] = n[j-1] , n[0] = n[-1]<br>
         - **TLE** - O(n*n) <br>
@@ -107,3 +107,15 @@ for i, val in enumerate(nums):
         - reverse first part of array - nums[:k:]<br>
         - reverse second part - nums[k:n]<br>
         - reverse whole - nums[::]<br>
+---
+## 8. Find the pivot index - [problem](https://leetcode.com/problems/find-pivot-index/submissions/2058251806/) <br>
+    1. **Prefix sum**<br>
+    - generate a prefix sum array ps[]<br>
+    - iterate through it - lsum = ps[i]-p[0] <br>
+                           rsum = p[n-1]-p[i+1]<br> return i if rsum==lsum<br><br>
+    2. **Totalsum**<br>
+    - rsum = totalsum - lsum - nums[i]<br>
+    if rsum==lsum : return i<br>
+    - lsum += nums[i]<br>
+
+    **Mistake** - used binary search method and 4 pointers (l1,r1,l2,r2) - consitionally incrementing and decrementing

@@ -84,21 +84,21 @@ for i, val in enumerate(nums):
 
 ---
 ## **5. Range Sum Query - Immutable - [problem](https://leetcode.com/problems/range-sum-query-immutable/)** <br>
-       **Prefix sum** approach <br>
+  **Prefix sum** approach <br>
     1. intialise prefix[] = [0] - append prefix[-1] + nums[i] <br>
     2. return prefix[right+1] - prefix[left] <br>
 
 ---
 ## **6. Maximum Subarray - [problem](https://leetcode.com/problems/maximum-subarray/)** <br>
-    1. **Brute force** - nested loop - O(n*n) - TLE <br>
+   1. **Brute force** - nested loop - O(n*n) - TLE <br>
             - iterate with two nested loops , sum += nums[j] , ans = max(ans,sum)<br>
     2. **Kadane's Algorithm** - single loop - O(n) <br>
         - maintain curr_sum and max_sum - while iterating- curr_sum += nums[i]<br>
         - max_sum = max(max_sum, curr_sum)<br>
     3. **DP Tabulation** - maintain a 
 ---
-## **7. Rotate array - [problem](https://leetcode.com/problems/rotate-array/description/)** <br>
-    1. **Brute force** - two for loops -  k value , for rotating array<br>
+## 7. Rotate array - [problem](https://leetcode.com/problems/rotate-array/description/) <br>
+   1. **Brute force** - two for loops -  k value , for rotating array<br>
         - shift values to prev place - n[j] = n[j-1] , n[0] = n[-1]<br>
         - **TLE** - O(n*n) <br>
     2. **Insert method** (Brute force) - insert last value at 0 index , update last value to new value , nums[:] = n[:n] <br>
@@ -109,7 +109,7 @@ for i, val in enumerate(nums):
         - reverse whole - nums[::]<br>
 ---
 ## 8. Find the pivot index - [problem](https://leetcode.com/problems/find-pivot-index/submissions/2058251806/) <br>
-    1. **Prefix sum**<br>
+   1. **Prefix sum**<br>
     - generate a prefix sum array ps[]<br>
     - iterate through it - lsum = ps[i]-p[0] <br>
                            rsum = p[n-1]-p[i+1]<br> return i if rsum==lsum<br><br>
@@ -118,4 +118,8 @@ for i, val in enumerate(nums):
     if rsum==lsum : return i<br>
     - lsum += nums[i]<br>
 
-    **Mistake** - used binary search method and 4 pointers (l1,r1,l2,r2) - consitionally incrementing and decrementing
+   **Mistake** - used binary search method and 4 pointers (l1,r1,l2,r2) - consitionally incrementing and decrementing
+---
+## 9. Maximum subarray - [problem](
+   1. **Brute Force** - Nested loop - add values to curr_sum and store the max(ans,curr_sum) at each iteration - **TLE**<br>
+   2. 

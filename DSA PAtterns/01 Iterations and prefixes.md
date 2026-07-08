@@ -122,4 +122,4 @@ for i, val in enumerate(nums):
 ---
 ## 9. Maximum subarray - [problem](
    1. **Brute Force** - Nested loop - add values to curr_sum and store the max(ans,curr_sum) at each iteration - **TLE**<br>
-   2. 
+   2. **Dp Memoization**

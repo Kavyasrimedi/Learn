@@ -117,9 +117,18 @@ for i, val in enumerate(nums):
     - rsum = totalsum - lsum - nums[i]<br>
     if rsum==lsum : return i<br>
     - lsum += nums[i]<br>
-
-   **Mistake** - used binary search method and 4 pointers (l1,r1,l2,r2) - consitionally incrementing and decrementing
+    **Mistake** - used binary search method and 4 pointers (l1,r1,l2,r2) - consitionally incrementing and decrementing
 ---
 ## 9. Maximum subarray - [problem](
    1. **Brute Force** - Nested loop - add values to curr_sum and store the max(ans,curr_sum) at each iteration - **TLE**<br>
-   2. **Dp Memoization**
+   2. **Dp Memoization** - Recursive  we are calculating each state of the dp just once and memoizing the result. Thus, we are calculating results for 2*N states and returning them directly in future recursive calls.<br>
+   3. **Dp Tabulation** - used dp array to store dp[[0],[0]].<br>
+          - dp[0][i] - max sum including ith num .<br>
+          - dp[1][i] - max sum upto ith num.<br>
+          - at every iteration dp[0][i]is updated with max sum  max(dp[0][i-1], dp[1][i]).<br>
+          - return dp[0][-1].<br>
+        **3.1 with a 1D DP array** store max(nums[i],nums[i]+dp[i-1]).<br>
+          return max(dp).<br>
+   4. **Kadane's Algorithm** - No maintaining a complete array as only dp[i]depends on dp[i-1].<br>
+       - cmax = max(cmax+c,c).<br>
+       - max_till_now = max(cmax, max_till_now) - return .<br>

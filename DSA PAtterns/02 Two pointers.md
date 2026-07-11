@@ -4,3 +4,6 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
   - Use two points --> i=0, j=len(s)-1<br>
   - if s[i] == s[j] i-=1 and j+=1 <br>
   - if s[i] != s[j] --> False (Terminates) <br>
+
+**2. Moving Zeroes - [problen](https://leetcode.com/problems/move-zeroes/)**<br>
+solved by swapping with next non zero value , didnt work so gonna swap a non zero num with zero

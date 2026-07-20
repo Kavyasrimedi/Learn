@@ -132,3 +132,6 @@ for i, val in enumerate(nums):
    4. **Kadane's Algorithm** - No maintaining a complete array as only dp[i]depends on dp[i-1].<br>
        - cmax = max(cmax+c,c).<br>
        - max_till_now = max(cmax, max_till_now) - return .<br>
+---
+## 10. Subarray with sum equals K - [prob](https://leetcode.com/problems/subarray-sum-equals-k/)
+    kadanes - do s+=n[i], deal with s=0 whren s==k

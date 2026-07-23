@@ -13,3 +13,9 @@ works as binary search
 indices - length of container 
 values - height of container 
 i * value = area
+---
+## 4. Remove Duplicates from Sorted Array - [prob](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+  - It has to be done inplace and return the index till where there are no duplicates
+  - replace the element at j with element at i when n[i]!=n[j]
+  - return j+1
+  - this reduces the array to an array with no duplicates

@@ -20,3 +20,5 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
   - replace the element at j with element at i when n[i]!=n[j]
   - return j+1
   - this reduces the array to an array with no duplicates
+  nums = nums[i::]  - creates a new variable that stores sliced nums
+  nums[::] = nums[i::] - updates the existing nums with sliced values (does inplace)

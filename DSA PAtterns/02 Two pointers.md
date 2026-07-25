@@ -16,9 +16,15 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
   - i * value = area
 ---
 ## 4. Remove Duplicates from Sorted Array - [prob](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+  **1. inplace**
   - It has to be done inplace and return the index till where there are no duplicates
   - replace the element at j with element at i when n[i]!=n[j]
   - return j+1
   - this reduces the array to an array with no duplicates
   nums = nums[i::]  - creates a new variable that stores sliced nums
   nums[::] = nums[i::] - updates the existing nums with sliced values (does inplace)
+  **2. pop()**
+    - if n[i]==n[i-1] --> n.pop(i)
+    - else i+=1
+    - return len(n)
+  

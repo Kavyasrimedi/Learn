@@ -28,3 +28,11 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
     - else i+=1
     - return len(n)
   
+## 5. Two Sum - sorted array 
+  - follow binary search method
+  - left=0, right=len-1
+  - curr_sum=n[left]+n[right]
+      - if curr_sum<target -> left+=1
+      - if curr_sum>target -> right-=1
+  - curr_sum == target -> ret left+1, right+1
+  - 

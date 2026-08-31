@@ -134,4 +134,13 @@ for i, val in enumerate(nums):
        - max_till_now = max(cmax, max_till_now) - return .<br>
 ---
 ## 10. Subarray with sum equals K - [prob](https://leetcode.com/problems/subarray-sum-equals-k/)
-    kadanes - do s+=n[i], deal with s=0 whren s==k
+  1. **Brute force** - if n[i]+n[j]==k -> c+=1 **TLE**<br>
+  2. **Conditional** - use 2 pointers <br>
+            - l - shrink/subtract<br>
+            - r - expand/add <br>
+            - if sum==k: c+=1<br>
+            - while sum>k and l<=r: sum-=n[l], l+=1<br>
+  3. **Prefix sum + hashmap** - optimal O(N)<br>
+        - calculate running prefix sum, freq={0:1} -- to handle when len(nums)=1<br>
+        - if prefix-k in freq - c += freq[prefix] -- since freq stores the number of times that prefix sum appeared so adding freq[prefix] is enough
+        - increment of value for prefix key -- freq[prefix] = freq.get(prefix,0)+1 

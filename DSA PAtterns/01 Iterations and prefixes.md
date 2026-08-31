@@ -135,7 +135,7 @@ for i, val in enumerate(nums):
 ---
 ## 10. Subarray with sum equals K - [prob](https://leetcode.com/problems/subarray-sum-equals-k/)
   1. **Brute force** - if n[i]+n[j]==k -> c+=1 **TLE**<br>
-  2. **Conditional** - use 2 pointers <br>
+  2. **Conditional** - use 2 pointers -- **can't handle negatives** <br>
             - l - shrink/subtract<br>
             - r - expand/add <br>
             - if sum==k: c+=1<br>

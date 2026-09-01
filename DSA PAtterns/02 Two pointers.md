@@ -5,17 +5,25 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
   - if s[i] == s[j] i-=1 and j+=1 <br>
   - if s[i] != s[j] --> False (Terminates) <br>
 ---
+## 2. Two sum II sorted array - [prob](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
+  - Use two pointers --> start, end
+  - if n[s]+n[e]<target -- s++
+  - if n[s]+n[e]>target -- e--
+  - Works as binary search **TC O(logN)**
 
 ## 2. Moving Zeroes - [problem](https://leetcode.com/problems/move-zeroes/)
   - solved by swapping with next non zero value , didnt work so gonna swap a non zero num with zero
 ---
-## 3. container with more water 
+## 3. container with more water - [prob](https://leetcode.com/problems/container-with-most-water/)
   - works as binary search 
   - indices - length of container 
   - values - height of container 
   - i * value = area
+  - two pointers - start, end 
 ---
-## 4. Remove Duplicates from Sorted Array - [prob](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+## 4. Container With Most Water - [prob](https://leetcode.com/problems/container-with-most-water/)
+  - 
+## . Remove Duplicates from Sorted Array - [prob](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
   **1. inplace**
   - It has to be done inplace and return the index till where there are no duplicates
   - replace the element at j with element at i when n[i]!=n[j]

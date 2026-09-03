@@ -10,20 +10,23 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
   - if n[s]+n[e]<target -- s++
   - if n[s]+n[e]>target -- e--
   - Works as binary search **TC O(logN)**
+---
+## 3. 3Sum
+---
 
-## 2. Moving Zeroes - [problem](https://leetcode.com/problems/move-zeroes/)
-  - solved by swapping with next non zero value , didnt work so gonna swap a non zero num with zero
+
 ---
-## 3. container with more water - [prob](https://leetcode.com/problems/container-with-most-water/)
-  - works as binary search 
-  - indices - length of container 
-  - values - height of container 
-  - i * value = area
-  - two pointers - start, end 
+## 4. container with more water - [prob](https://leetcode.com/problems/container-with-most-water/) 
+  - **TC = O(logN)**
+  - works as binary search - two pointers - (start, end)
+  - h=min(height[s],height[e]); b=(j-i) --> water = l*b
+  - if h[s]<h[e] --> s+=1 else e-=1
+  - Store max water at each iteration
+  
 ---
-## 4. Container With Most Water - [prob](https://leetcode.com/problems/container-with-most-water/)
-  - 
-## . Remove Duplicates from Sorted Array - [prob](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
+## 5. Trapping Rain Water
+---
+## 6. Remove Duplicates from Sorted Array - [prob](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)
   **1. inplace**
   - It has to be done inplace and return the index till where there are no duplicates
   - replace the element at j with element at i when n[i]!=n[j]
@@ -35,4 +38,8 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
     - if n[i]==n[i-1] --> n.pop(i)
     - else i+=1
     - return len(n)
-  
+---
+## 7. Moving Zeroes - [problem](https://leetcode.com/problems/move-zeroes/)
+  - solved by swapping with next non zero value , didnt work so gonna swap a non zero num with zero
+---
+## 8. Sort Colors

@@ -42,4 +42,11 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
 ## 7. Moving Zeroes - [problem](https://leetcode.com/problems/move-zeroes/)
   - solved by swapping with next non zero value , didnt work so gonna swap a non zero num with zero
 ---
-## 8. Sort Colors
+## 8. Sort Colors - [problem](https://leetcode.com/problems/sort-colors/description/)
+   **1. Bubble sort** O(N**2)- two nested for loop - swap the greater value with lesser<br>
+     **2. Dutch algo**: O(N)
+       - 3 pointers - low, mid, high (while mid<high)
+       - mid for tracing values 
+       - if mid=0 swap with low --> low++, mid++
+       - if mid=1 no swap --> mid++
+       - if mid=2 swap with high --> high--

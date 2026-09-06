@@ -44,9 +44,9 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
 ---
 ## 8. Sort Colors - [problem](https://leetcode.com/problems/sort-colors/description/)
    **1. Bubble sort** O(N**2)- two nested for loop - swap the greater value with lesser<br>
-     **2. Dutch algo**: O(N)
-       - 3 pointers - low, mid, high (while mid<high)
-       - mid for tracing values 
-       - if mid=0 swap with low --> low++, mid++
-       - if mid=1 no swap --> mid++
-       - if mid=2 swap with high --> high--
+     **2. Dutch algo**: O(N)<br>
+       - 3 pointers - low, mid, high (while mid<high)<br>
+       - mid for tracing values <br>
+       - if mid=0 swap with low --> low++, mid++<br>
+       - if mid=1 no swap --> mid++<br>
+       - if mid=2 swap with high --> high--<br>

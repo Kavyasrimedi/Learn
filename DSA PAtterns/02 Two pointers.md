@@ -17,7 +17,7 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
 
 ---
 ## 4. container with more water - [prob](https://leetcode.com/problems/container-with-most-water/) 
-  - **TC = O(logN)**
+  - **TC = O(N)**
   - works as binary search - two pointers - (start, end)
   - h=min(height[s],height[e]); b=(j-i) --> water = l*b
   - if h[s]<h[e] --> s+=1 else e-=1
@@ -43,8 +43,8 @@ uses two pointers to reduce TC from O(n*n) to O(n)<br>
   - solved by swapping with next non zero value , didnt work so gonna swap a non zero num with zero
 ---
 ## 8. Sort Colors - [problem](https://leetcode.com/problems/sort-colors/description/)
-   **1. Bubble sort** O(N**2)- two nested for loop - swap the greater value with lesser<br>
-     **2. Dutch algo**: O(N)<br>
+   **1. Bubble sort O(N^2)**- two nested for loop - swap the greater value with lesser<br>
+   **2. Dutch algo: O(N)** <br>
        - 3 pointers - low, mid, high (while mid<high)<br>
        - mid for tracing values <br>
        - if mid=0 swap with low --> low++, mid++<br>
